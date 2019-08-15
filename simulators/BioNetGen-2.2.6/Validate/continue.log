@@ -1,0 +1,109 @@
+[validate continue]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/BNG2.pl --outdir /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.bngl
+[child process ID is: 53931]
+BioNetGen version 2.2.6
+Reading from file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.bngl (level 0)
+Read 4 parameters.
+Read 4 molecule types.
+Read 4 species.
+Read 6 observable(s).
+Read 3 reaction rule(s).
+ACTION: generate_network( continue )
+Iteration   0:     4 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     5 species      3 rxns  1.00e-02 CPU s
+Iteration   2:     5 species      4 rxns  0.00e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   2:     1 reactions 1.00e-02 CPU s 1.00e-02 CPU s/rxn
+Rule   3:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :     4 reactions 1.00e-02 CPU s 2.50e-03 CPU s/rxn
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net.
+CPU TIME: generate_network 0.01 s.
+Set concentration of species A() to value 1
+CPU TIME: setConcentration 0.00 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net.
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net 0.5 20
+[simulation PID is: 53933]
+run_network 3.0
+Read 4 parameters
+$Trash() is a fixed (boundaryCondition) variable
+Read 5 species
+Read 6 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net
+Read 0 function(s)
+Read 4 reaction(s)
+4 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.cdat.
+Time course of groups written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.gdat.
+Propagation took 0.00e+00 CPU seconds
+Program times:  0.00 CPU s 0.00 clock s 
+Updating species concentrations from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.cdat
+CPU TIME: simulate_ode 0.00 s.
+Set concentration of species A() to value 0
+CPU TIME: setConcentration 0.00 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net.
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -x -i 10 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net 0.5 60
+[simulation PID is: 53935]
+run_network 3.0
+Read 4 parameters
+$Trash() is a fixed (boundaryCondition) variable
+Read 5 species
+Read 6 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net
+Read 0 function(s)
+Read 4 reaction(s)
+4 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.cdat.
+Time course of groups written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.gdat.
+Propagation took 0.00e+00 CPU seconds
+Program times:  0.00 CPU s 0.00 clock s 
+Updating species concentrations from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.cdat
+CPU TIME: simulate_ode 0.00 s.
+Finished processing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.bngl.
+CPU TIME: total 0.01 s.
+-------------------------------------------------------------------------------
+ -> checking species in .NET file
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_species.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/continue.net
+[child process ID is: 53936]
+Testing Species..
+command:  /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_species.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/continue.net 
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/continue.net passed species test.
+
+-------------------------------------------------------------------------------
+ -> checking reactions in .NET file
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_rxn.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/continue.net
+[child process ID is: 53937]
+Testing Reaction Network..
+command:  /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_rxn.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/continue.net 
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.net and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/continue.net passed reaction network test.
+
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.cdat /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/continue.cdat
+[child process ID is: 53938]
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl is comparing /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.cdat and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/continue.cdat
+PASSED!!  norm error (8.848002E-16) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+ -> checking observable trajectory
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.gdat /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/continue.gdat
+[child process ID is: 53939]
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl is comparing /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/continue.gdat and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/continue.gdat
+PASSED!!  norm error (1.072680E-09) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+continue passed all validation tests.

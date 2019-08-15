@@ -1,0 +1,11 @@
+prefix=/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: muparser
+Description: Mathematical expressions parser library
+Version: 2.2.4
+Requires:
+Libs: -L${libdir} -lmuparser
+Cflags: -I${includedir}

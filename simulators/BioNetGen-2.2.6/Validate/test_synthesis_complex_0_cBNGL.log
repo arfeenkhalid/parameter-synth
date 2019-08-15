@@ -1,0 +1,90 @@
+[validate test_synthesis_complex_0_cBNGL]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/BNG2.pl --outdir /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.bngl
+[child process ID is: 54429]
+BioNetGen version 2.2.6
+Reading from file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.bngl (level 0)
+Read 1 parameters.
+Read 8 molecule types.
+Read 2 compartments.
+Read 6 species.
+Read 6 reaction rule(s).
+Read 6 observable(s).
+ACTION: generate_network( test_synthesis_complex_0_cBNGL )
+Iteration   0:     6 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     6 species      6 rxns  0.00e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   2:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   3:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   4:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   5:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   6:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :     6 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net.
+CPU TIME: generate_network 0.01 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net.
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net 0.4 100
+[simulation PID is: 54431]
+run_network 3.0
+Read 1 parameters
+Read 6 species
+Read 6 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net
+Read 0 function(s)
+Found species with index 0 at line 14: assuming this is the null species.
+Found species with index 0 at line 15: assuming this is the null species.
+Found species with index 0 at line 16: assuming this is the null species.
+Found species with index 0 at line 17: assuming this is the null species.
+Found species with index 0 at line 18: assuming this is the null species.
+Found species with index 0 at line 19: assuming this is the null species.
+Read 6 reaction(s)
+6 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.cdat.
+Time course of groups written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.gdat.
+Propagation took 0.00e+00 CPU seconds
+Program times:  0.00 CPU s 0.00 clock s 
+Updating species concentrations from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.cdat
+CPU TIME: simulate 0.00 s.
+Finished processing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.bngl.
+CPU TIME: total 0.02 s.
+-------------------------------------------------------------------------------
+ -> checking species in .NET file
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_species.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_synthesis_complex_0_cBNGL.net
+[child process ID is: 54432]
+Testing Species..
+command:  /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_species.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_synthesis_complex_0_cBNGL.net 
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_synthesis_complex_0_cBNGL.net passed species test.
+
+-------------------------------------------------------------------------------
+ -> checking reactions in .NET file
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_rxn.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_synthesis_complex_0_cBNGL.net
+[child process ID is: 54433]
+Testing Reaction Network..
+command:  /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_rxn.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_synthesis_complex_0_cBNGL.net 
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.net and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_synthesis_complex_0_cBNGL.net passed reaction network test.
+
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.cdat /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_synthesis_complex_0_cBNGL.cdat
+[child process ID is: 54434]
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl is comparing /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.cdat and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_synthesis_complex_0_cBNGL.cdat
+PASSED!!  norm error (0.000000E+00) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+ -> checking observable trajectory
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.gdat /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_synthesis_complex_0_cBNGL.gdat
+[child process ID is: 54435]
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl is comparing /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_synthesis_complex_0_cBNGL.gdat and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_synthesis_complex_0_cBNGL.gdat
+PASSED!!  norm error (0.000000E+00) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+test_synthesis_complex_0_cBNGL passed all validation tests.

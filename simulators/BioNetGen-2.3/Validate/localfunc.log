@@ -1,0 +1,96 @@
+[validate localfunc]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/BNG2.pl --outdir /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.bngl
+[child process ID is: 12966]
+BioNetGen version 2.3.1
+Reading from file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.bngl (level 0)
+Read 4 parameters.
+Read 4 molecule types.
+Read 4 species.
+Read 8 observable(s).
+Read 1 functions.
+Read 3 reaction rule(s).
+ACTION: generate_network( localfunc )
+Iteration   0:     4 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     5 species      3 rxns  1.00e-02 CPU s
+Iteration   2:     6 species      6 rxns  1.00e-02 CPU s
+Iteration   3:     7 species      9 rxns  1.00e-02 CPU s
+Iteration   4:     7 species     11 rxns  0.00e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:     4 reactions 1.00e-02 CPU s 2.50e-03 CPU s/rxn
+Rule   2:     6 reactions 2.00e-02 CPU s 3.33e-03 CPU s/rxn
+Rule   3:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :    11 reactions 3.00e-02 CPU s 2.73e-03 CPU s/rxn
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net.
+CPU TIME: generate_network 0.03 s.
+Wrote M-file script /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.m.
+CPU TIME: writeMfile 0.00 s.
+Wrote Mexfile /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc_mex_cvode.c and M-file script /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc_mex.m.
+CPU TIME: writeMexfile 0.01 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net.
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net.
+Running run_network on testing-docker-547a2b78-093b-4159-b7f3-37af2a5417e3
+full command: /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/bin/run_network -o /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net 0.25 40
+[simulation PID is: 12968]
+run_network 3.0
+Read 8 parameters
+$Trash() is a fixed (boundaryCondition) variable
+Read 7 species
+Read 8 group(s) from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net
+Read 0 function(s)
+Read 11 reaction(s)
+Removed 1 reactions with zero rate
+10 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.cdat.
+Time course of groups written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.gdat.
+Propagation took 0.00e+00 CPU seconds
+Program times:  0.00 CPU s 0.00 clock s 
+Updating species concentrations from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.cdat
+CPU TIME: simulate_ode 0.00 s.
+Finished processing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.bngl.
+CPU TIME: total 0.05 s.
+-------------------------------------------------------------------------------
+ -> checking species in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/localfunc.net
+[child process ID is: 12969]
+Testing Species..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/localfunc.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/localfunc.net passed species test.
+
+-------------------------------------------------------------------------------
+ -> checking reactions in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/localfunc.net
+[child process ID is: 12970]
+Testing Reaction Network..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/localfunc.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/localfunc.net passed reaction network test.
+
+-------------------------------------------------------------------------------
+ -> checking M-file generator
+-------------------------------------------------------------------------------
+ -> checking MEX/CVode generator
+-------------------------------------------------------------------------------
+ -> checking Mex/CVode companion M-file specification
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.cdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/localfunc.cdat
+[child process ID is: 12971]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.cdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/localfunc.cdat
+PASSED!!  norm error (3.364487E-15) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+ -> checking observable trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.gdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/localfunc.gdat
+[child process ID is: 12972]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/localfunc.gdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/localfunc.gdat
+PASSED!!  norm error (2.631610E-15) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+localfunc passed all validation tests.

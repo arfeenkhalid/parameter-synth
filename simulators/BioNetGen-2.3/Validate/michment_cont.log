@@ -1,0 +1,106 @@
+[validate michment_cont]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/BNG2.pl --outdir /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.bngl
+[child process ID is: 12982]
+BioNetGen version 2.3.1
+Reading from file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.bngl (level 0)
+Reading from file michment_cont.net (level 1)
+Read 6 parameters.
+Warning: Parameter 'Sa0' is referenced but not defined
+  at line 11
+  (if parameter is defined in a subsequent block,
+  then this warning can be safely ignored.)
+Read 1 functions.
+Adding P as allowed state of component a of molecule S
+Adding T as allowed state of component c of molecule S
+Read 5 species.
+Read 6 reaction(s).
+WARNING: Found 'groups' block before 'observables': creating observables.
+Read 6 group(s).
+Finished processing file michment_cont.net.
+CPU TIME: readFile 0.01 s.
+Set concentration of species S(a~0,c~R) to value S0
+CPU TIME: setConcentration 0.00 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net.
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net.
+Running run_network on testing-docker-547a2b78-093b-4159-b7f3-37af2a5417e3
+full command: /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/bin/run_network -o /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont -p cvode -a 1e-08 -r 1e-08 -b --cdat 1 --fdat 0 -g /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net 0.2 50
+[simulation PID is: 12984]
+run_network 3.0
+Read 6 parameters
+Read 5 species
+Read 6 group(s) from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net
+Read 1 function(s)
+Read 6 reaction(s)
+6 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using GMRES
+Time course of concentrations written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.cdat.
+Time course of groups written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.gdat.
+Propagation took 0.00e+00 CPU seconds
+Program times:  0.00 CPU s 0.00 clock s 
+Updating species concentrations from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.cdat
+CPU TIME: simulate_ode 0.00 s.
+Add 100 counts (or concentration units) to species S(a~0,c~R) for total of 102.302255180226
+CPU TIME: addConcentration 0.00 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net.
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net.
+Running run_network on testing-docker-547a2b78-093b-4159-b7f3-37af2a5417e3
+full command: /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/bin/run_network -o /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont -p cvode -a 1e-08 -r 1e-08 -b --cdat 1 --fdat 0 -x -i 10 -g /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net 0.2 50
+[simulation PID is: 12986]
+run_network 3.0
+Read 6 parameters
+Read 5 species
+Read 6 group(s) from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net
+Read 1 function(s)
+Read 6 reaction(s)
+6 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using GMRES
+Time course of concentrations written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.cdat.
+Time course of groups written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.gdat.
+Propagation took 0.00e+00 CPU seconds
+Program times:  0.00 CPU s 0.00 clock s 
+Updating species concentrations from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.cdat
+CPU TIME: simulate_ode 0.00 s.
+Finished processing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.bngl.
+CPU TIME: total 0.01 s.
+-------------------------------------------------------------------------------
+ -> checking species in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/michment_cont.net
+[child process ID is: 12987]
+Testing Species..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/michment_cont.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/michment_cont.net passed species test.
+
+-------------------------------------------------------------------------------
+ -> checking reactions in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/michment_cont.net
+[child process ID is: 12988]
+Testing Reaction Network..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/michment_cont.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/michment_cont.net passed reaction network test.
+
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.cdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/michment_cont.cdat
+[child process ID is: 12989]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.cdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/michment_cont.cdat
+PASSED!!  norm error (1.042579E-13) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+ -> checking observable trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.gdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/michment_cont.gdat
+[child process ID is: 12990]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/michment_cont.gdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/michment_cont.gdat
+PASSED!!  norm error (4.220599E-16) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+michment_cont passed all validation tests.

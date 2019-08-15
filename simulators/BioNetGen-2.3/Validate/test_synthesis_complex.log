@@ -1,0 +1,83 @@
+[validate test_synthesis_complex]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/BNG2.pl --outdir /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.bngl
+[child process ID is: 13131]
+BioNetGen version 2.3.1
+Reading from file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.bngl (level 0)
+Read 1 parameters.
+Read 6 molecule types.
+Read 2 species.
+Read 3 reaction rule(s).
+Read 4 observable(s).
+ACTION: generate_network( test_synthesis_complex )
+Iteration   0:     2 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     5 species      3 rxns  0.00e+00 CPU s
+Iteration   2:     5 species      3 rxns  0.00e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   2:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   3:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :     3 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net.
+CPU TIME: generate_network 0.01 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net.
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net.
+Running run_network on testing-docker-547a2b78-093b-4159-b7f3-37af2a5417e3
+full command: /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/bin/run_network -o /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net 0.4 100
+[simulation PID is: 13133]
+run_network 3.0
+Read 1 parameters
+$Source() is a fixed (boundaryCondition) variable
+Read 5 species
+Read 4 group(s) from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net
+Read 0 function(s)
+Found species with index 0 at line 13: assuming this is the null species.
+Read 3 reaction(s)
+3 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.cdat.
+Time course of groups written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.gdat.
+Propagation took 0.00e+00 CPU seconds
+Program times:  0.00 CPU s 0.00 clock s 
+Updating species concentrations from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.cdat
+CPU TIME: simulate 0.00 s.
+Finished processing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.bngl.
+CPU TIME: total 0.01 s.
+-------------------------------------------------------------------------------
+ -> checking species in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_synthesis_complex.net
+[child process ID is: 13134]
+Testing Species..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_synthesis_complex.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_synthesis_complex.net passed species test.
+
+-------------------------------------------------------------------------------
+ -> checking reactions in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_synthesis_complex.net
+[child process ID is: 13135]
+Testing Reaction Network..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_synthesis_complex.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_synthesis_complex.net passed reaction network test.
+
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.cdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_synthesis_complex.cdat
+[child process ID is: 13136]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.cdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_synthesis_complex.cdat
+PASSED!!  norm error (0.000000E+00) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+ -> checking observable trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.gdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_synthesis_complex.gdat
+[child process ID is: 13137]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_synthesis_complex.gdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_synthesis_complex.gdat
+PASSED!!  norm error (0.000000E+00) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+test_synthesis_complex passed all validation tests.

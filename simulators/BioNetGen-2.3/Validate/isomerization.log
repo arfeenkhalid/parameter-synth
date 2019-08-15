@@ -1,0 +1,75 @@
+[validate isomerization]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/BNG2.pl --outdir /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization.bngl
+[child process ID is: 12961]
+BioNetGen version 2.3.1
+Reading from file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization.bngl (level 0)
+Read 3 parameters.
+Read 1 molecule types.
+Read 1 species.
+Read 3 observable(s).
+Read 1 reaction rule(s).
+ACTION: generate_network( isomerization )
+Iteration   0:     1 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     2 species      1 rxns  0.00e+00 CPU s
+Iteration   2:     2 species      2 rxns  0.00e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization.net.
+CPU TIME: generate_network 0.00 s.
+ACTION: simulate( method=>"ssa" )
+Network simulation using ssa
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_burnin.net.
+Running run_network on testing-docker-547a2b78-093b-4159-b7f3-37af2a5417e3
+full command: /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/bin/run_network -o /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_burnin -p ssa -h 2107537521 --cdat 1 --fdat 0 -g /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_burnin.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_burnin.net 10000 1
+[simulation PID is: 12963]
+run_network 3.0
+Read 3 parameters
+Read 2 species
+Read 3 group(s) from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_burnin.net
+Read 0 function(s)
+Read 2 reaction(s)
+2 reaction(s) have nonzero rate
+rxn_rate_update_interval=1
+Average number of update rxns is 2.00
+Initialization took 0.00 CPU seconds
+Stochastic simulation using direct Gillespie algorithm
+TOTAL STEPS: 66944           
+Time course of concentrations written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_burnin.cdat.
+Time course of groups written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_burnin.gdat.
+Propagation took 0.00e+00 CPU seconds
+Program times:  0.00 CPU s 0.00 clock s 
+Updating species concentrations from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_burnin.cdat
+CPU TIME: simulate_ssa 0.00 s.
+ACTION: simulate( method=>"ssa" )
+Network simulation using ssa
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_ssa_equil.net.
+Running run_network on testing-docker-547a2b78-093b-4159-b7f3-37af2a5417e3
+full command: /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/bin/run_network -o /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_ssa_equil -p ssa -h 1352808455 --cdat 1 --fdat 0 -g /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_ssa_equil.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_ssa_equil.net 100 10000
+[simulation PID is: 12965]
+run_network 3.0
+Read 3 parameters
+Read 2 species
+Read 3 group(s) from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_ssa_equil.net
+Read 0 function(s)
+Read 2 reaction(s)
+2 reaction(s) have nonzero rate
+rxn_rate_update_interval=1
+Average number of update rxns is 2.00
+Initialization took 0.00 CPU seconds
+Stochastic simulation using direct Gillespie algorithm
+TOTAL STEPS: 6667559         
+Time course of concentrations written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_ssa_equil.cdat.
+Time course of groups written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_ssa_equil.gdat.
+Propagation took 1.00e+00 CPU seconds
+Program times:  1.00 CPU s 1.00 clock s 
+Updating species concentrations from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization_ssa_equil.cdat
+CPU TIME: simulate_ssa 1.01 s.
+Finished processing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/isomerization.bngl.
+CPU TIME: total 1.02 s.
+-------------------------------------------------------------------------------
+ -> checking SSA equilibrium distribution
+-------------------------------------------------------------------------------
+isomerization passed all validation tests.

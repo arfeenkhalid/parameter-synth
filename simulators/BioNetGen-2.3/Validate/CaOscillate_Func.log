@@ -1,0 +1,85 @@
+[validate CaOscillate_Func]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/BNG2.pl --outdir /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.bngl
+[child process ID is: 12866]
+BioNetGen version 2.3.1
+Reading from file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.bngl (level 0)
+Read 17 parameters.
+Read 4 molecule types.
+Read 4 species.
+Read 4 observable(s).
+Read 8 reaction rule(s).
+ACTION: generate_network( CaOscillate_Func )
+Iteration   0:     4 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     4 species      8 rxns  1.00e-02 CPU s
+Cumulative CPU time for each rule
+Rule   1:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   2:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   3:     1 reactions 1.00e-02 CPU s 1.00e-02 CPU s/rxn
+Rule   4:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   5:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   6:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   7:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   8:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :     8 reactions 1.00e-02 CPU s 1.25e-03 CPU s/rxn
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net.
+CPU TIME: generate_network 0.01 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net.
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net.
+Running run_network on testing-docker-547a2b78-093b-4159-b7f3-37af2a5417e3
+full command: /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/bin/run_network -o /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func -p cvode -a 1e-12 -r 1e-12 --cdat 1 --fdat 0 -g /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net 0.1 500
+[simulation PID is: 12868]
+run_network 3.0
+Read 17 parameters
+Read 4 species
+Read 4 group(s) from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net
+Read 4 function(s)
+Read 8 reaction(s)
+8 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.cdat.
+Time course of groups written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.gdat.
+Propagation took 3.00e-02 CPU seconds
+Program times:  0.03 CPU s 0.00 clock s 
+Updating species concentrations from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.cdat
+CPU TIME: simulate_ode 0.03 s.
+Finished processing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.bngl.
+CPU TIME: total 0.05 s.
+-------------------------------------------------------------------------------
+ -> checking species in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/CaOscillate_Func.net
+[child process ID is: 12869]
+Testing Species..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/CaOscillate_Func.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/CaOscillate_Func.net passed species test.
+
+-------------------------------------------------------------------------------
+ -> checking reactions in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/CaOscillate_Func.net
+[child process ID is: 12870]
+Testing Reaction Network..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/CaOscillate_Func.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/CaOscillate_Func.net passed reaction network test.
+
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.cdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/CaOscillate_Func.cdat
+[child process ID is: 12871]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.cdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/CaOscillate_Func.cdat
+PASSED!!  norm error (1.006128E-10) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+ -> checking observable trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.gdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/CaOscillate_Func.gdat
+[child process ID is: 12872]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/CaOscillate_Func.gdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/CaOscillate_Func.gdat
+PASSED!!  norm error (4.771032E-10) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+CaOscillate_Func passed all validation tests.

@@ -1,0 +1,27 @@
+name: parameter-synth
+channels:
+- 'defaults'
+dependencies:
+- mkl
+- numpy
+- openssl
+- pandas
+- pip
+- py
+- pytest
+- python
+- python-dateutil
+- pytz
+- readline
+- scipy
+- scikit-learn
+- setuptools
+- singledispatch
+- six
+- sqlite
+- tk
+- wheel
+- zlib
+- pip:
+  - parsimonious
+

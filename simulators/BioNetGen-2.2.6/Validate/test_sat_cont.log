@@ -1,0 +1,48 @@
+[validate test_sat_cont]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/BNG2.pl --outdir /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.bngl
+[child process ID is: 54349]
+BioNetGen version 2.2.6
+Reading from file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.bngl (level 0)
+Reading from file test_sat_cont.net (level 1)
+Read 2 parameters.
+Read 3 species.
+Read 1 reaction(s).
+WARNING: Found 'groups' block before 'observables': creating observables.
+Read 3 group(s).
+Finished processing file test_sat_cont.net.
+CPU TIME: readFile 0.00 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.net.
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.net 0.1 10
+[simulation PID is: 54351]
+run_network 3.0
+Read 2 parameters
+Read 3 species
+Read 3 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.net
+Read 0 function(s)
+Read 1 reaction(s)
+1 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.cdat.
+Time course of groups written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.gdat.
+Propagation took 0.00e+00 CPU seconds
+Program times:  0.00 CPU s 0.00 clock s 
+Updating species concentrations from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.cdat
+CPU TIME: simulate_ode 0.00 s.
+Finished processing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.bngl.
+CPU TIME: total 0.00 s.
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.cdat /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_sat_cont.cdat
+[child process ID is: 54352]
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl is comparing /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sat_cont.cdat and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/test_sat_cont.cdat
+PASSED!!  norm error (3.281134E-14) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+test_sat_cont passed all validation tests.

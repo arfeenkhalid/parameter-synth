@@ -1,0 +1,110 @@
+[validate test_network_gen]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/BNG2.pl --outdir /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.bngl
+[child process ID is: 13056]
+BioNetGen version 2.3.1
+Reading from file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.bngl (level 0)
+Read 26 parameters.
+Read 4 species.
+Adding pY as allowed state of component b of molecule Rec
+Adding pY as allowed state of component g of molecule Rec
+Adding pY as allowed state of component l of molecule Syk
+Adding pY as allowed state of component a of molecule Syk
+Read 19 reaction rule(s).
+Read 10 observable(s).
+ACTION: generate_network( test_network_gen )
+Iteration   0:     4 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     6 species      2 rxns  1.00e-02 CPU s
+Iteration   2:     9 species      8 rxns  1.00e-02 CPU s
+Iteration   3:    12 species     20 rxns  3.00e-02 CPU s
+Iteration   4:    22 species     36 rxns  3.00e-02 CPU s
+Iteration   5:    43 species    100 rxns  1.10e-01 CPU s
+Iteration   6:    78 species    255 rxns  2.70e-01 CPU s
+Iteration   7:   139 species    586 rxns  6.00e-01 CPU s
+Iteration   8:   199 species   1190 rxns  1.32e+00 CPU s
+Iteration   9:   303 species   1841 rxns  1.98e+00 CPU s
+Iteration  10:   354 species   3143 rxns  3.27e+00 CPU s
+Iteration  11:   354 species   3680 rxns  1.05e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:    48 reactions 1.70e-01 CPU s 3.54e-03 CPU s/rxn
+Rule   2:  1152 reactions 2.63e+00 CPU s 2.28e-03 CPU s/rxn
+Rule   3:   312 reactions 7.40e-01 CPU s 2.37e-03 CPU s/rxn
+Rule   4:    36 reactions 1.30e-01 CPU s 3.61e-03 CPU s/rxn
+Rule   5:    24 reactions 9.00e-02 CPU s 3.75e-03 CPU s/rxn
+Rule   6:   312 reactions 6.70e-01 CPU s 2.15e-03 CPU s/rxn
+Rule   7:    36 reactions 1.30e-01 CPU s 3.61e-03 CPU s/rxn
+Rule   8:    24 reactions 1.10e-01 CPU s 4.58e-03 CPU s/rxn
+Rule   9:   832 reactions 1.87e+00 CPU s 2.25e-03 CPU s/rxn
+Rule  10:    48 reactions 2.00e-01 CPU s 4.17e-03 CPU s/rxn
+Rule  11:    48 reactions 1.70e-01 CPU s 3.54e-03 CPU s/rxn
+Rule  12:    64 reactions 3.70e-01 CPU s 5.78e-03 CPU s/rxn
+Rule  13:    64 reactions 2.20e-01 CPU s 3.44e-03 CPU s/rxn
+Rule  14:   156 reactions 2.50e-01 CPU s 1.60e-03 CPU s/rxn
+Rule  15:   104 reactions 1.70e-01 CPU s 1.63e-03 CPU s/rxn
+Rule  16:   208 reactions 3.90e-01 CPU s 1.88e-03 CPU s/rxn
+Rule  17:   208 reactions 3.50e-01 CPU s 1.68e-03 CPU s/rxn
+Rule  18:     2 reactions 2.00e-02 CPU s 1.00e-02 CPU s/rxn
+Rule  19:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :  3680 reactions 8.68e+00 CPU s 2.36e-03 CPU s/rxn
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net.
+CPU TIME: generate_network 8.87 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net.
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net.
+Running run_network on testing-docker-547a2b78-093b-4159-b7f3-37af2a5417e3
+full command: /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/bin/run_network -o /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net 60 10
+[simulation PID is: 13058]
+run_network 3.0
+Read 26 parameters
+Read 354 species
+Read 10 group(s) from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net
+Read 0 function(s)
+Read 3680 reaction(s)
+Removed 600 reactions with zero rate
+3080 reaction(s) have nonzero rate
+Initialization took 0.04 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.cdat.
+Time course of groups written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.gdat.
+Propagation took 1.04e+00 CPU seconds
+Program times:  1.08 CPU s 1.00 clock s 
+Updating species concentrations from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.cdat
+CPU TIME: simulate_ode 1.24 s.
+Finished processing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.bngl.
+CPU TIME: total 10.16 s.
+-------------------------------------------------------------------------------
+ -> checking species in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_network_gen.net
+[child process ID is: 13059]
+Testing Species..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_network_gen.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_network_gen.net passed species test.
+
+-------------------------------------------------------------------------------
+ -> checking reactions in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_network_gen.net
+[child process ID is: 13060]
+Testing Reaction Network..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_network_gen.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_network_gen.net passed reaction network test.
+
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.cdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_network_gen.cdat
+[child process ID is: 13061]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.cdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_network_gen.cdat
+PASSED!!  norm error (0.000000E+00) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+ -> checking observable trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.gdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_network_gen.gdat
+[child process ID is: 13062]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/test_network_gen.gdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/test_network_gen.gdat
+PASSED!!  norm error (0.000000E+00) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+test_network_gen passed all validation tests.

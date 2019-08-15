@@ -1,0 +1,11 @@
+prefix=/home/rschiro/ParameterDiscovery/cluster_message_sample/BioNetGen-2.2.6
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: muparser
+Description: Mathematical expressions parser library
+Version: 2.2.4
+Requires:
+Libs: -L${libdir} -lmuparser
+Cflags: -I${includedir}

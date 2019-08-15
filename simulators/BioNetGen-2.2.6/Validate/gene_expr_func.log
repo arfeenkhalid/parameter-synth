@@ -1,0 +1,46 @@
+[validate gene_expr_func]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/BNG2.pl --outdir /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/gene_expr_func.bngl
+[child process ID is: 53997]
+BioNetGen version 2.2.6
+Reading from file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/gene_expr_func.bngl (level 0)
+Read 11 parameters.
+Read 5 molecule types.
+Read 5 species.
+Read 4 observable(s).
+Read 2 functions.
+Read 5 reaction rule(s).
+ACTION: generate_network( gene_expr_func )
+Iteration   0:     5 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     6 species      5 rxns  1.00e-02 CPU s
+Iteration   2:     6 species      6 rxns  0.00e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   2:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   3:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   4:     1 reactions 1.00e-02 CPU s 1.00e-02 CPU s/rxn
+Rule   5:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :     6 reactions 1.00e-02 CPU s 1.67e-03 CPU s/rxn
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/gene_expr_func.net.
+CPU TIME: generate_network 0.01 s.
+ACTION: simulate( method=>"ssa" )
+Network simulation using ssa
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/gene_expr_func_burnin.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/gene_expr_func_burnin -p ssa -h 1904244557 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/gene_expr_func_burnin.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/gene_expr_func_burnin.net 10000000 1
+[simulation PID is: 54006]
+run_network 3.0
+Read 11 parameters
+$Null() is a fixed (boundaryCondition) variable
+Read 6 species
+Read 4 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/gene_expr_func_burnin.net
+Read 0 function(s)
+Undefined rate constant fcn_mRNA at line 29.
+Undefined rate constant fcn_Prot at line 30.
+Reaction list not read because of errors.
+ERROR: No reactions in the network.
+ABORT: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/gene_expr_func_burnin -p ssa -h 1904244557 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/gene_expr_func_burnin.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/gene_expr_func_burnin.net 10000000 1
+  did not run successfully.
+  at line 92
+-------------------------------------------------------------------------------

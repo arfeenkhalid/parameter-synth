@@ -1,0 +1,100 @@
+[validate Repressilator]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/BNG2.pl --outdir /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.bngl
+[child process ID is: 54262]
+BioNetGen version 2.2.6
+Reading from file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.bngl (level 0)
+Read 13 parameters.
+Read 10 molecule types.
+Read 10 species.
+Read 4 observable(s).
+Read 21 reaction rule(s).
+ACTION: generate_network( Repressilator )
+Iteration   0:    10 species      0 rxns  0.00e+00 CPU s
+Iteration   1:    13 species     15 rxns  2.00e-02 CPU s
+Iteration   2:    16 species     24 rxns  1.00e-02 CPU s
+Iteration   3:    16 species     30 rxns  1.00e-02 CPU s
+Cumulative CPU time for each rule
+Rule   1:     2 reactions 2.00e-02 CPU s 1.00e-02 CPU s/rxn
+Rule   2:     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule   3:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   4:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   5:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   6:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   7:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   8:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   9:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  10:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  11:     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  12:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  13:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  14:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  15:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  16:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  17:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  18:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  19:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  20:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  21:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :    30 reactions 4.00e-02 CPU s 1.33e-03 CPU s/rxn
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net.
+CPU TIME: generate_network 0.05 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net.
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator -p cvode -a 1e-12 -r 1e-12 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net 100 400
+[simulation PID is: 54264]
+run_network 3.0
+Read 34 parameters
+Read 16 species
+Read 4 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net
+Read 0 function(s)
+Read 30 reaction(s)
+30 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.cdat.
+Time course of groups written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.gdat.
+Propagation took 2.00e-02 CPU seconds
+Program times:  0.02 CPU s 0.00 clock s 
+Updating species concentrations from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.cdat
+CPU TIME: simulate_ode 0.03 s.
+Finished processing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.bngl.
+CPU TIME: total 0.12 s.
+-------------------------------------------------------------------------------
+ -> checking species in .NET file
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_species.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Repressilator.net
+[child process ID is: 54265]
+Testing Species..
+command:  /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_species.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Repressilator.net 
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Repressilator.net passed species test.
+
+-------------------------------------------------------------------------------
+ -> checking reactions in .NET file
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_rxn.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Repressilator.net
+[child process ID is: 54266]
+Testing Reaction Network..
+command:  /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_rxn.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Repressilator.net 
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.net and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Repressilator.net passed reaction network test.
+
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.cdat /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Repressilator.cdat
+[child process ID is: 54267]
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl is comparing /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.cdat and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Repressilator.cdat
+PASSED!!  norm error (1.429835E-10) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+ -> checking observable trajectory
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.gdat /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Repressilator.gdat
+[child process ID is: 54276]
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl is comparing /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Repressilator.gdat and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Repressilator.gdat
+PASSED!!  norm error (1.565910E-09) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+Repressilator passed all validation tests.

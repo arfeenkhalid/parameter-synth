@@ -1,0 +1,75 @@
+[validate isomerization]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/BNG2.pl --outdir /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization.bngl
+[child process ID is: 54164]
+BioNetGen version 2.2.6
+Reading from file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization.bngl (level 0)
+Read 3 parameters.
+Read 1 molecule types.
+Read 1 species.
+Read 3 observable(s).
+Read 1 reaction rule(s).
+ACTION: generate_network( isomerization )
+Iteration   0:     1 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     2 species      1 rxns  1.00e-02 CPU s
+Iteration   2:     2 species      2 rxns  0.00e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Total   :     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization.net.
+CPU TIME: generate_network 0.01 s.
+ACTION: simulate( method=>"ssa" )
+Network simulation using ssa
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_burnin.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_burnin -p ssa -h 1182880896 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_burnin.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_burnin.net 10000 1
+[simulation PID is: 54166]
+run_network 3.0
+Read 3 parameters
+Read 2 species
+Read 3 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_burnin.net
+Read 0 function(s)
+Read 2 reaction(s)
+2 reaction(s) have nonzero rate
+rxn_rate_update_interval=1
+Average number of update rxns is 2.00
+Initialization took 0.00 CPU seconds
+Stochastic simulation using direct Gillespie algorithm
+TOTAL STEPS: 66952           
+Time course of concentrations written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_burnin.cdat.
+Time course of groups written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_burnin.gdat.
+Propagation took 0.00e+00 CPU seconds
+Program times:  0.00 CPU s 0.00 clock s 
+Updating species concentrations from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_burnin.cdat
+CPU TIME: simulate_ssa 0.01 s.
+ACTION: simulate( method=>"ssa" )
+Network simulation using ssa
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_ssa_equil.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_ssa_equil -p ssa -h 180577386 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_ssa_equil.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_ssa_equil.net 100 10000
+[simulation PID is: 54168]
+run_network 3.0
+Read 3 parameters
+Read 2 species
+Read 3 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_ssa_equil.net
+Read 0 function(s)
+Read 2 reaction(s)
+2 reaction(s) have nonzero rate
+rxn_rate_update_interval=1
+Average number of update rxns is 2.00
+Initialization took 0.00 CPU seconds
+Stochastic simulation using direct Gillespie algorithm
+TOTAL STEPS: 6668338         
+Time course of concentrations written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_ssa_equil.cdat.
+Time course of groups written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_ssa_equil.gdat.
+Propagation took 8.40e-01 CPU seconds
+Program times:  0.84 CPU s 2.00 clock s 
+Updating species concentrations from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization_ssa_equil.cdat
+CPU TIME: simulate_ssa 0.84 s.
+Finished processing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/isomerization.bngl.
+CPU TIME: total 0.86 s.
+-------------------------------------------------------------------------------
+ -> checking SSA equilibrium distribution
+-------------------------------------------------------------------------------
+isomerization passed all validation tests.

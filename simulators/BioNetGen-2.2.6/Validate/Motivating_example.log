@@ -1,0 +1,151 @@
+[validate Motivating_example]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/BNG2.pl --outdir /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.bngl
+[child process ID is: 54190]
+BioNetGen version 2.2.6
+Reading from file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.bngl (level 0)
+Read 50 parameters.
+Read 11 molecule types.
+Read 7 species.
+Read 46 reaction rule(s).
+Read 33 observable(s).
+ACTION: generate_network( Motivating_example )
+Iteration   0:     7 species      0 rxns  0.00e+00 CPU s
+Iteration   1:    10 species      3 rxns  2.00e-02 CPU s
+Iteration   2:    13 species     10 rxns  2.00e-02 CPU s
+Iteration   3:    16 species     19 rxns  4.00e-02 CPU s
+Iteration   4:    25 species     31 rxns  6.00e-02 CPU s
+Iteration   5:    36 species     74 rxns  1.10e-01 CPU s
+Iteration   6:    41 species    136 rxns  1.50e-01 CPU s
+Iteration   7:    43 species    168 rxns  1.00e-01 CPU s
+Iteration   8:    50 species    181 rxns  8.00e-02 CPU s
+Iteration   9:    58 species    240 rxns  1.70e-01 CPU s
+Iteration  10:    60 species    297 rxns  1.70e-01 CPU s
+Iteration  11:    61 species    302 rxns  2.00e-02 CPU s
+Iteration  12:    63 species    305 rxns  2.00e-02 CPU s
+Iteration  13:    65 species    311 rxns  3.00e-02 CPU s
+Iteration  14:    66 species    314 rxns  3.00e-02 CPU s
+Iteration  15:    67 species    316 rxns  1.00e-02 CPU s
+Iteration  16:    68 species    318 rxns  0.00e+00 CPU s
+Iteration  17:    70 species    321 rxns  1.00e-02 CPU s
+Iteration  18:    71 species    328 rxns  2.00e-02 CPU s
+Iteration  19:    73 species    332 rxns  2.00e-02 CPU s
+Iteration  20:    75 species    340 rxns  1.00e-02 CPU s
+Iteration  21:    76 species    349 rxns  3.00e-02 CPU s
+Iteration  22:    77 species    351 rxns  1.00e-02 CPU s
+Iteration  23:    78 species    353 rxns  1.00e-02 CPU s
+Iteration  24:    78 species    354 rxns  0.00e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule   2:     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule   3:     8 reactions 3.00e-02 CPU s 3.75e-03 CPU s/rxn
+Rule   4:     8 reactions 5.00e-02 CPU s 6.25e-03 CPU s/rxn
+Rule   5:    20 reactions 7.00e-02 CPU s 3.50e-03 CPU s/rxn
+Rule   6:    20 reactions 6.00e-02 CPU s 3.00e-03 CPU s/rxn
+Rule   7:    16 reactions 8.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule   8:    16 reactions 6.00e-02 CPU s 3.75e-03 CPU s/rxn
+Rule   9:    32 reactions 7.00e-02 CPU s 2.19e-03 CPU s/rxn
+Rule  10:    32 reactions 8.00e-02 CPU s 2.50e-03 CPU s/rxn
+Rule  11:    10 reactions 9.00e-02 CPU s 9.00e-03 CPU s/rxn
+Rule  12:     4 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  13:     4 reactions 2.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  14:     4 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  15:    10 reactions 3.00e-02 CPU s 3.00e-03 CPU s/rxn
+Rule  16:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  17:     1 reactions 1.00e-02 CPU s 1.00e-02 CPU s/rxn
+Rule  18:     8 reactions 3.00e-02 CPU s 3.75e-03 CPU s/rxn
+Rule  19:    14 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  20:    28 reactions 8.00e-02 CPU s 2.86e-03 CPU s/rxn
+Rule  21:    28 reactions 8.00e-02 CPU s 2.86e-03 CPU s/rxn
+Rule  22:     4 reactions 1.00e-02 CPU s 2.50e-03 CPU s/rxn
+Rule  23:    15 reactions 2.00e-02 CPU s 1.33e-03 CPU s/rxn
+Rule  24:     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  25:     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  26:     4 reactions 2.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  27:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  28:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  29:     1 reactions 1.00e-02 CPU s 1.00e-02 CPU s/rxn
+Rule  30:     1 reactions 1.00e-02 CPU s 1.00e-02 CPU s/rxn
+Rule  31:     1 reactions 1.00e-02 CPU s 1.00e-02 CPU s/rxn
+Rule  32:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  33:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  34:     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  35:     8 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  36:     1 reactions 1.00e-02 CPU s 1.00e-02 CPU s/rxn
+Rule  37:     4 reactions 2.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  38:     4 reactions 3.00e-02 CPU s 7.50e-03 CPU s/rxn
+Rule  39:     4 reactions 2.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  40:     4 reactions 2.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  41:     6 reactions 1.00e-02 CPU s 1.67e-03 CPU s/rxn
+Rule  42:     6 reactions 2.00e-02 CPU s 3.33e-03 CPU s/rxn
+Rule  43:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  44:     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  45:     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  46:     4 reactions 2.00e-02 CPU s 5.00e-03 CPU s/rxn
+Total   :   354 reactions 1.14e+00 CPU s 3.22e-03 CPU s/rxn
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net.
+CPU TIME: generate_network 1.17 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net.
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net 0.4 100
+[simulation PID is: 54206]
+run_network 3.0
+Read 72 parameters
+$Sink() is a fixed (boundaryCondition) variable
+Read 78 species
+Read 33 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net
+Read 0 function(s)
+Read 354 reaction(s)
+354 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.cdat.
+Time course of groups written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.gdat.
+Propagation took 2.00e-02 CPU seconds
+Program times:  0.02 CPU s 0.00 clock s 
+Updating species concentrations from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.cdat
+CPU TIME: simulate_ode 0.04 s.
+Wrote SBML to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example_sbml.xml.
+CPU TIME: writeSBML 0.02 s.
+Finished processing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.bngl.
+CPU TIME: total 1.36 s.
+-------------------------------------------------------------------------------
+ -> checking species in .NET file
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_species.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Motivating_example.net
+[child process ID is: 54211]
+Testing Species..
+command:  /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_species.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Motivating_example.net 
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Motivating_example.net passed species test.
+
+-------------------------------------------------------------------------------
+ -> checking reactions in .NET file
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_rxn.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Motivating_example.net
+[child process ID is: 54214]
+Testing Reaction Network..
+command:  /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_rxn.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Motivating_example.net 
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.net and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Motivating_example.net passed reaction network test.
+
+-------------------------------------------------------------------------------
+ -> checking SBML specification
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.cdat /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Motivating_example.cdat
+[child process ID is: 54245]
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl is comparing /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.cdat and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Motivating_example.cdat
+PASSED!!  norm error (9.443788E-14) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+ -> checking observable trajectory
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.gdat /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Motivating_example.gdat
+[child process ID is: 54246]
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl is comparing /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/Motivating_example.gdat and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/Motivating_example.gdat
+PASSED!!  norm error (6.172750E-10) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+Motivating_example passed all validation tests.

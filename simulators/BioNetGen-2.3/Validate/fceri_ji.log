@@ -1,0 +1,92 @@
+[validate fceri_ji]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/BNG2.pl --outdir /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.bngl
+[child process ID is: 12902]
+BioNetGen version 2.3.1
+Reading from file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.bngl (level 0)
+Read 26 parameters.
+Read 4 species.
+Adding pY as allowed state of component b of molecule Rec
+Adding pY as allowed state of component g of molecule Rec
+Adding pY as allowed state of component l of molecule Syk
+Adding pY as allowed state of component a of molecule Syk
+Read 19 reaction rule(s).
+Read 10 observable(s).
+ACTION: generate_network( fceri_ji )
+Iteration   0:     4 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     6 species      2 rxns  1.00e-02 CPU s
+Iteration   2:     9 species      8 rxns  2.00e-02 CPU s
+Iteration   3:    12 species     20 rxns  5.00e-02 CPU s
+Iteration   4:    22 species     36 rxns  6.00e-02 CPU s
+Iteration   5:    43 species    100 rxns  1.40e-01 CPU s
+Iteration   6:    78 species    255 rxns  3.80e-01 CPU s
+Iteration   7:   139 species    586 rxns  9.90e-01 CPU s
+Iteration   8:   199 species   1190 rxns  2.01e+00 CPU s
+Iteration   9:   303 species   1841 rxns  2.37e+00 CPU s
+Iteration  10:   354 species   3143 rxns  3.12e+00 CPU s
+Iteration  11:   354 species   3680 rxns  1.12e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:    48 reactions 2.10e-01 CPU s 4.38e-03 CPU s/rxn
+Rule   2:  1152 reactions 3.00e+00 CPU s 2.60e-03 CPU s/rxn
+Rule   3:   312 reactions 8.90e-01 CPU s 2.85e-03 CPU s/rxn
+Rule   4:    36 reactions 1.90e-01 CPU s 5.28e-03 CPU s/rxn
+Rule   5:    24 reactions 1.30e-01 CPU s 5.42e-03 CPU s/rxn
+Rule   6:   312 reactions 9.30e-01 CPU s 2.98e-03 CPU s/rxn
+Rule   7:    36 reactions 1.70e-01 CPU s 4.72e-03 CPU s/rxn
+Rule   8:    24 reactions 1.30e-01 CPU s 5.42e-03 CPU s/rxn
+Rule   9:   832 reactions 2.02e+00 CPU s 2.43e-03 CPU s/rxn
+Rule  10:    48 reactions 2.50e-01 CPU s 5.21e-03 CPU s/rxn
+Rule  11:    48 reactions 2.10e-01 CPU s 4.37e-03 CPU s/rxn
+Rule  12:    64 reactions 3.80e-01 CPU s 5.94e-03 CPU s/rxn
+Rule  13:    64 reactions 3.30e-01 CPU s 5.16e-03 CPU s/rxn
+Rule  14:   156 reactions 3.10e-01 CPU s 1.99e-03 CPU s/rxn
+Rule  15:   104 reactions 2.10e-01 CPU s 2.02e-03 CPU s/rxn
+Rule  16:   208 reactions 4.70e-01 CPU s 2.26e-03 CPU s/rxn
+Rule  17:   208 reactions 3.80e-01 CPU s 1.83e-03 CPU s/rxn
+Rule  18:     2 reactions 3.00e-02 CPU s 1.50e-02 CPU s/rxn
+Rule  19:     2 reactions 3.00e-02 CPU s 1.50e-02 CPU s/rxn
+Total   :  3680 reactions 1.03e+01 CPU s 2.79e-03 CPU s/rxn
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.net.
+CPU TIME: generate_network 10.43 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.net.
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.net.
+Running run_network on testing-docker-547a2b78-093b-4159-b7f3-37af2a5417e3
+full command: /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/bin/run_network -o /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.net 60 10
+[simulation PID is: 12905]
+run_network 3.0
+Read 26 parameters
+Read 354 species
+Read 10 group(s) from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.net
+Read 0 function(s)
+Read 3680 reaction(s)
+Removed 600 reactions with zero rate
+3080 reaction(s) have nonzero rate
+Initialization took 0.05 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.cdat.
+Time course of groups written to file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.gdat.
+Propagation took 1.06e+00 CPU seconds
+Program times:  1.11 CPU s 2.00 clock s 
+Updating species concentrations from /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.cdat
+CPU TIME: simulate_ode 1.28 s.
+Finished processing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.bngl.
+CPU TIME: total 11.81 s.
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.cdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/fceri_ji.cdat
+[child process ID is: 12906]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.cdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/fceri_ji.cdat
+PASSED!!  norm error (3.325373E-09) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+ -> checking observable trajectory
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.gdat /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/fceri_ji.gdat
+[child process ID is: 12907]
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Perl2/verify.pl is comparing /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/fceri_ji.gdat and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/fceri_ji.gdat
+PASSED!!  norm error (3.625076E-08) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+fceri_ji passed all validation tests.

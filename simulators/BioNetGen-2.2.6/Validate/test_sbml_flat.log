@@ -1,0 +1,51 @@
+[validate test_sbml_flat]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/BNG2.pl --outdir /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat.bngl
+[child process ID is: 54353]
+BioNetGen version 2.2.6
+Reading from file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat.bngl (level 0)
+SBML translation: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/sbmlTranslator -i "INPUT_FILES/test_sbml_flat_SBML.xml" -o "/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat_SBML.bngl"
+Reading from file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat_SBML.bngl (level 1)
+Read 6 parameters.
+Read 1 compartments.
+Read 5 molecule types.
+Read 5 species.
+Read 5 observable(s).
+Read 7 functions.
+Read 6 reaction rule(s).
+Finished processing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat_SBML.bngl.
+CPU TIME: readFile 0.82 s.
+ACTION: generate_network( test_sbml_flat )
+Iteration   0:     5 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     5 species      6 rxns  0.00e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   2:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   3:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   4:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   5:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   6:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :     6 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat.net.
+CPU TIME: generate_network 0.00 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat.net.
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat.net 1 100
+[simulation PID is: 54366]
+run_network 3.0
+Read 6 parameters
+Read 5 species
+Read 5 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat.net
+Read 0 function(s)
+Undefined rate constant functionRate4 at line 31.
+Undefined rate constant dim_r at line 32.
+Reaction list not read because of errors.
+ERROR: No reactions in the network.
+ABORT: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_sbml_flat.net 1 100
+  did not run successfully.
+  at line 3
+-------------------------------------------------------------------------------

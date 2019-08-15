@@ -1,0 +1,34 @@
+model_file_name = fceri
+
+no_of_params = 26
+param0 = Lig_tot;602000;602;602000000
+param1 = Rec_tot;400;0.4;400000
+param2 = Lyn_tot;28;0.028;28000
+param3 = Syk_tot;400.0;0.4;400000
+param4 = kp1;0.000000132845238;0.000000000132845238;0.000132845238
+param5 = km1;0.01;0.00001;10
+param6 = kp2;0.25;0.00025;250
+param7 = km2;0.01;0.00001;10
+param8 = kpL;0.05;0.00005;50
+param9 = kmL;20;0.02;20000
+param10 = kpLs;0.05;0.00005;50
+param11 = kmLs;0.12;0.00012;120
+param12 = kpS;0.06;0.00006;60  
+param13 = kmS;0.13;0.00013;130
+param14 = kpSs;0.06;0.00006;60
+param15 = kmSs;0.13;0.00013;130
+param16 = pLb;30;0.03;30000
+param17 = pLbs;100;0.1;100000
+param18 = pLg;1;0.001;1000
+param19 = pLgs;3;0.003;3000
+param20 = pLS;30;0.03;30000
+param21 = pLSs;100;0.1;100000
+param22 = pSS;100;0.1;100000
+param23 = pSSs;200;0.2;200000
+param24 = dm;20;0.02;20000
+param25 = dc;20;0.02;20000
+
+no_of_specs = 1
+spec0 = G[1200,3000]({RecPgamma / RecPbeta} >= 2.0)
+
+req_prob0 = 0.99

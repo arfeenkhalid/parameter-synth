@@ -1,0 +1,96 @@
+[validate localfunc]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/BNG2.pl --outdir /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.bngl
+[child process ID is: 54177]
+BioNetGen version 2.2.6
+Reading from file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.bngl (level 0)
+Read 4 parameters.
+Read 4 molecule types.
+Read 4 species.
+Read 8 observable(s).
+Read 1 functions.
+Read 3 reaction rule(s).
+ACTION: generate_network( localfunc )
+Iteration   0:     4 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     5 species      3 rxns  1.00e-02 CPU s
+Iteration   2:     6 species      6 rxns  0.00e+00 CPU s
+Iteration   3:     7 species      9 rxns  1.00e-02 CPU s
+Iteration   4:     7 species     11 rxns  0.00e+00 CPU s
+Cumulative CPU time for each rule
+Rule   1:     4 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   2:     6 reactions 2.00e-02 CPU s 3.33e-03 CPU s/rxn
+Rule   3:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :    11 reactions 2.00e-02 CPU s 1.82e-03 CPU s/rxn
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net.
+CPU TIME: generate_network 0.02 s.
+Wrote M-file script /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.m.
+CPU TIME: writeMfile 0.00 s.
+Wrote Mexfile /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc_mex_cvode.c and M-file script /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc_mex.m.
+CPU TIME: writeMexfile 0.00 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net.
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net 0.25 40
+[simulation PID is: 54181]
+run_network 3.0
+Read 8 parameters
+$Trash() is a fixed (boundaryCondition) variable
+Read 7 species
+Read 8 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net
+Read 0 function(s)
+Read 11 reaction(s)
+Removed 1 reactions with zero rate
+10 reaction(s) have nonzero rate
+Initialization took 0.00 CPU seconds
+Propagating with cvode using dense LU
+Time course of concentrations written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.cdat.
+Time course of groups written to file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.gdat.
+Propagation took 0.00e+00 CPU seconds
+Program times:  0.00 CPU s 0.00 clock s 
+Updating species concentrations from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.cdat
+CPU TIME: simulate_ode 0.01 s.
+Finished processing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.bngl.
+CPU TIME: total 0.05 s.
+-------------------------------------------------------------------------------
+ -> checking species in .NET file
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_species.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/localfunc.net
+[child process ID is: 54182]
+Testing Species..
+command:  /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_species.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/localfunc.net 
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/localfunc.net passed species test.
+
+-------------------------------------------------------------------------------
+ -> checking reactions in .NET file
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_rxn.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/localfunc.net
+[child process ID is: 54183]
+Testing Reaction Network..
+command:  /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/compare_rxn.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/localfunc.net 
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.net and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/localfunc.net passed reaction network test.
+
+-------------------------------------------------------------------------------
+ -> checking M-file generator
+-------------------------------------------------------------------------------
+ -> checking MEX/CVode generator
+-------------------------------------------------------------------------------
+ -> checking Mex/CVode companion M-file specification
+-------------------------------------------------------------------------------
+ -> checking species trajectory
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.cdat /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/localfunc.cdat
+[child process ID is: 54184]
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl is comparing /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.cdat and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/localfunc.cdat
+PASSED!!  norm error (3.364487E-15) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+ -> checking observable trajectory
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.gdat /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/localfunc.gdat
+[child process ID is: 54185]
+/home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Perl2/verify.pl is comparing /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/localfunc.gdat and /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/DAT_validate/localfunc.gdat
+PASSED!!  norm error (2.631610E-15) <= threshold error (1.000000E-07).
+-------------------------------------------------------------------------------
+localfunc passed all validation tests.

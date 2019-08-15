@@ -1,0 +1,48 @@
+[validate blbr]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/BNG2.pl --outdir /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/blbr.bngl
+[child process ID is: 12863]
+BioNetGen version 2.3.1
+Reading from file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/blbr.bngl (level 0)
+SpeciesLabel method set to HNauty.
+Read 8 parameters.
+Read 2 species.
+Read 3 reaction rule(s).
+ACTION: generate_network( blbr )
+Iteration   0:     2 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     3 species      1 rxns  0.00e+00 CPU s
+Iteration   2:     7 species      6 rxns  2.00e-02 CPU s
+Iteration   3:    14 species     24 rxns  1.60e-01 CPU s
+Iteration   4:    19 species     71 rxns  8.00e-01 CPU s
+Iteration   5:    20 species     91 rxns  6.00e-01 CPU s
+Iteration   6:    20 species     92 rxns  1.00e-01 CPU s
+Cumulative CPU time for each rule
+Rule   1:    18 reactions 2.10e-01 CPU s 1.17e-02 CPU s/rxn
+Rule   2:    64 reactions 1.16e+00 CPU s 1.81e-02 CPU s/rxn
+Rule   3:    10 reactions 3.10e-01 CPU s 3.10e-02 CPU s/rxn
+Total   :    92 reactions 1.68e+00 CPU s 1.83e-02 CPU s/rxn
+Wrote network in net format to /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/blbr.net.
+CPU TIME: generate_network 1.68 s.
+Finished processing file /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/blbr.bngl.
+CPU TIME: total 1.69 s.
+-------------------------------------------------------------------------------
+ -> checking species in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/blbr.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/blbr.net
+[child process ID is: 12864]
+Testing Species..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_species.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/blbr.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/blbr.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/blbr.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/blbr.net passed species test.
+
+-------------------------------------------------------------------------------
+ -> checking reactions in .NET file
+running command:
+/usr/bin/perl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/blbr.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/blbr.net
+[child process ID is: 12865]
+Testing Reaction Network..
+command:  /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/compare_rxn.pl /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/blbr.net /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/blbr.net 
+/home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/blbr.net and /home/travis/build/RuleWorld/bionetgen/bng2/BioNetGen-2.3.1/Validate/DAT_validate/blbr.net passed reaction network test.
+
+-------------------------------------------------------------------------------
+blbr passed all validation tests.

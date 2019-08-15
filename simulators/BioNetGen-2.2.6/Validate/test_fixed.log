@@ -1,0 +1,63 @@
+[validate test_fixed]
+ -> processing model file with BioNetGen
+running command:
+/usr/bin/perl /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/BNG2.pl --outdir /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed.bngl
+[child process ID is: 54306]
+BioNetGen version 2.2.6
+Reading from file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed.bngl (level 0)
+Read 7 parameters.
+Read 6 molecule types.
+Read 3 species.
+Read 11 observable(s).
+Read 12 reaction rule(s).
+ACTION: generate_network( test_fixed )
+Iteration   0:     3 species      0 rxns  0.00e+00 CPU s
+Iteration   1:     5 species      2 rxns  0.00e+00 CPU s
+Iteration   2:     6 species      5 rxns  0.00e+00 CPU s
+Iteration   3:     7 species      6 rxns  0.00e+00 CPU s
+Iteration   4:     8 species      7 rxns  1.00e-02 CPU s
+Iteration   5:     9 species      8 rxns  0.00e+00 CPU s
+Iteration   6:    10 species     10 rxns  0.00e+00 CPU s
+Iteration   7:    11 species     13 rxns  1.00e-02 CPU s
+Iteration   8:    12 species     16 rxns  0.00e+00 CPU s
+Iteration   9:    12 species     18 rxns  1.00e-02 CPU s
+Cumulative CPU time for each rule
+Rule   1:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   2:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   3:     4 reactions 1.00e-02 CPU s 2.50e-03 CPU s/rxn
+Rule   4:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   5:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   6:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   7:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   8:     1 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule   9:     1 reactions 1.00e-02 CPU s 1.00e-02 CPU s/rxn
+Rule  10:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Rule  11:     2 reactions 1.00e-02 CPU s 5.00e-03 CPU s/rxn
+Rule  12:     2 reactions 0.00e+00 CPU s 0.00e+00 CPU s/rxn
+Total   :    18 reactions 3.00e-02 CPU s 1.67e-03 CPU s/rxn
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed.net.
+CPU TIME: generate_network 0.03 s.
+ACTION: simulate( method=>"cvode" )
+Network simulation using cvode
+WARNING: writeFile(): Overwriting existing file /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed.net.
+Wrote network in net format to /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed.net.
+Running run_network on robin-centos
+full command: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed.net 0.25 240
+[simulation PID is: 54322]
+run_network 3.0
+Read 8 parameters
+$A() is a fixed (boundaryCondition) variable
+$Degr() is a fixed (boundaryCondition) variable
+$Trash() is a fixed (boundaryCondition) variable
+Read 12 species
+Read 11 group(s) from /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed.net
+Read 0 function(s)
+Found species with index 0 at line 32: assuming this is the null species.
+Undefined rate constant _rateLaw1 at line 32.
+Undefined rate constant _rateLaw2 at line 35.
+Reaction list not read because of errors.
+ERROR: No reactions in the network.
+ABORT: /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/bin/run_network -o /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed -p cvode -a 1e-08 -r 1e-08 --cdat 1 --fdat 0 -g /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed.net /home/robin/RuleBender-2.1.0.8-lin64/BioNetGen-2.2.6/Validate/test_fixed.net 0.25 240
+  did not run successfully.
+  at line 84
+-------------------------------------------------------------------------------
