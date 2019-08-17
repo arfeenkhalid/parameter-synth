@@ -14,6 +14,9 @@ https://www.anaconda.com/distribution/
 2) Install Anaconda (example for Linux):
 > bash Anaconda-latest-Linux-x86_64.sh
 
+3) Initialize conda:
+> conda init
+
 Installation:
 1) Download the git repository of the code and navigate inside the "parameter-synth" folder.
 
