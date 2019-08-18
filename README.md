@@ -28,18 +28,18 @@ Installation:
 
 This will run 'n' number of parameter estimation processes in the background for the given 'spec_filename'. The output on the terminal will show the time taken by each estimation process to find the parameters or to exit the process in case no parameters are found. Estimated set of parameters can be found inside the 'outputs/' folder in the form of a text file named 'estimated_parameters.txt'. (NOTE: Default value for 'n' is 20)
 
-Examples (Fceri Model):
-> make run spec=fceri_1 n=15      #(estimates parameters of Fceri model agaisnt Property 1)
+Examples (Fceri Model, Table 1):
+> make run spec=fceri_1 n=15      # (Table 1, row 1), (estimates parameters of Fceri model agaisnt Property 1)
 
-> make run spec=fceri_2 n=20      #(estimates parameters of Fceri model agaisnt Property 2)
+> make run spec=fceri_2 n=20      # (Table 1, row 2), (estimates parameters of Fceri model agaisnt Property 2)
 
-> make run spec=fceri_1_2_3 n=20  #(estimates parameters of Fceri model agaisnt Property 1, 2 and 3)
+> make run spec=fceri_1_2_3 n=20  # (Table 1, row 7), (estimates parameters of Fceri model agaisnt Property 1, 2 and 3)
 
 
-Examples (T-cell Model):
-> make run spec=t-cell_1 n=10      #(estimates parameters of T-cell model agaisnt Property 1)
+Examples (T-cell Model, Table 3):
+> make run spec=t-cell_1 n=10      # (Table 3, row 1), (estimates parameters of T-cell model agaisnt Property 1)
 
-> make run spec=t-cell_1_2 n=30      #(estimates parameters of T-cell model agaisnt Property 1 and 2)
+> make run spec=t-cell_1_2 n=30      # (Table 3, row 4), (estimates parameters of T-cell model agaisnt Property 1 and 2)
 
-> make run spec=t-cell_1_2_3 n=40  #(estimates parameters of T-cell model agaisnt Property 1, 2 and 3)
+> make run spec=t-cell_1_2_3 n=40  # (Table 3, row 7), (estimates parameters of T-cell model agaisnt Property 1, 2 and 3)
 
