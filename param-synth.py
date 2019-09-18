@@ -13,6 +13,7 @@ from param import Param
 from param import Point
 from file_handler import FileHandler
 from collections import OrderedDict
+import signal
 
 trace_file_name = "trace"
 model_file_name = ""
@@ -50,6 +51,8 @@ def main(argv):
     global opt_iteration
     global current_temperature
     global confidence
+
+    signal.signal(signal.SIGTERM, terminateProcess)
 
     if not sys.warnoptions:
        import warnings
@@ -203,10 +206,10 @@ def main(argv):
         #print("-----------------------------------------------------------------")
         #print("Estimated Parameter Values:")
         print("Successful in estimating parameter values!!!")
-        print("Please find estimated set of parameter values inside the output/ folder")
+        print("Please find estimated set of parameter values inside the \"output/"+ program_time_stamp +"/\" folder")
         print("\n\n")
 
-        file_handler.write_output_file(output_file, "Specification: " + spec_file_name + "\n\n")
+        file_handler.write_output_file(output_file, "Specification: " + file_handler.spec_file_name + "\n\n")
         file_handler.write_output_file(output_file, "Estimated Parameter Values:\n")
 
         for i in range(no_of_params):
@@ -435,7 +438,12 @@ def select_a_neighbouring_point(previous_point, param_list, no_of_params):
         else:
             break
     
-    return new_point        
+    return new_point  
+
+def terminateProcess(signalNumber, frame):
+    print ('Process terminated.')
+    file_handler.remove_dir_for_prog_run()
+    sys.exit()       
 
 if __name__ == "__main__":
     main(sys.argv[1:])

@@ -1,5 +1,6 @@
 import numpy as np
 import os
+import shutil
 
 class FileHandler:
     def __init__(self, program_time_stamp, model_file_name, confidence, spec_file_name="", no_of_params=0):
@@ -36,6 +37,13 @@ class FileHandler:
 
         output_dir = os.path.join("output/", self.program_time_stamp)
         os.makedirs(output_dir)
+
+    def remove_dir_for_prog_run(self):
+        model_dir = os.path.join("models/", self.program_time_stamp)
+        shutil.rmtree(model_dir)
+
+        output_dir = os.path.join("output/", self.program_time_stamp)
+        shutil.rmtree(output_dir)
         
     def create_output_file(self):
         output_file = open("output/" + self.program_time_stamp + "/estimated_parameters.txt", 'a')

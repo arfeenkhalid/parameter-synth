@@ -10,7 +10,7 @@ echo $program_time_stamp
 
 # Run BioNetGen simulation.
 echo "Running BioNetGen simulation..."
-./simulators/BioNetGen-2.3/BNG2.pl --outdir output/$program_time_stamp/ ./models/$program_time_stamp/$model_file_name.bngl
+./simulators/BioNetGen-2.3/BNG2.pl --outdir output/$program_time_stamp/ ./models/$program_time_stamp/$model_file_name.bngl &> /dev/null
 
 # Read the contents of the gdat file.
 gdatContents=`cat output/$program_time_stamp/*$model_file_name*.gdat`
