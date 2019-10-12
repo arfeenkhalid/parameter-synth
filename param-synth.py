@@ -117,7 +117,7 @@ def main(argv):
 
         file_handler.sa_generate_model_file_with_new_point(initial_point, param_list, opt_iteration)
 
-        hyp_test_result, mean, is_process_timed_out = perform_hyp_test()
+        hyp_test_result, mean, is_process_timed_out, no_of_successful_samples, total_samples = perform_hyp_test()
 
         opt_iteration += 1
 
@@ -150,7 +150,7 @@ def main(argv):
 
             file_handler.sa_generate_model_file_with_new_point(current_point, param_list, opt_iteration)
 
-            hyp_test_result, mean, is_process_timed_out = perform_hyp_test()
+            hyp_test_result, mean, is_process_timed_out, no_of_successful_samples, total_samples = perform_hyp_test()
             opt_iteration += 1
 
             if is_process_timed_out == True:
@@ -209,8 +209,13 @@ def main(argv):
         print("Please find estimated set of parameter values inside the \"output/"+ program_time_stamp +"/\" folder")
         print("\n\n")
 
-        file_handler.write_output_file(output_file, "Specification: " + file_handler.spec_file_name + "\n\n")
-        file_handler.write_output_file(output_file, "Estimated Parameter Values:\n")
+        file_handler.write_output_file(output_file, "Specification: " + file_handler.spec_file_name + "\n")
+        file_handler.write_output_file(output_file, "Total samples: " + str(total_samples) + "\n")
+        sample_number = 1
+        for sample in no_of_successful_samples:
+                file_handler.write_output_file(output_file, "No. of successful samples for Property " + str(sample_number) + ": " + str(sample) + "\n")
+                sample_number = sample_number + 1
+        file_handler.write_output_file(output_file, "\nEstimated Parameter Values:\n")
 
         for i in range(no_of_params):
             #print("Param Name: ", param_list[i].name)
@@ -303,11 +308,11 @@ def perform_hyp_test():
 
             if is_process_timed_out:
                 is_process_timed_out = True
-                return hyp_test_result, mean, is_process_timed_out
+                return hyp_test_result, mean, is_process_timed_out, no_of_successful_samples, idx
 
             if np.isnan(s[i]) or np.isinf(s[i]):
                 is_invalid_score = True
-                return hyp_test_result, mean, is_invalid_score
+                return hyp_test_result, mean, is_invalid_score, no_of_successful_samples, idx
 
             if idx > 3 and is_stopping_boundary_crossed[i] == False:
                 d = 0
@@ -372,7 +377,7 @@ def perform_hyp_test():
     #print("mean: ", mean)
     #print("final mean: ", final_mean)
 
-    return final_hyp_result, final_mean, is_process_timed_out
+    return final_hyp_result, final_mean, is_process_timed_out, no_of_successful_samples, idx
 
 
 def run_bionetgen_simulation_and_verify_trace_with_telex(idx, point_num = 0):  
