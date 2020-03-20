@@ -2,6 +2,8 @@
 
 BioMETA: A multiple specification parameter estimation system for stochastic biochemical models
 
+Link to paper: https://arxiv.org/pdf/2001.03781.pdf
+
 -----------------------------------------
 Installation Instructions
 -----------------------------------------
